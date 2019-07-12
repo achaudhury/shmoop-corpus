@@ -1,0 +1,235 @@
+Stories in Manually Aligned Validation Set:
+A Christmas Carol
+A Midsummer Night's Dream
+An Enquiry Concerning the Principles of Morals
+Cymbeline
+Ethan Frome
+Jude the Obscure
+Maggie: A Girl of the Streets
+Richard III
+Siddhartha
+Sister Carrie
+Tartuffe
+The Brothers Karamazov
+The Masque of the Red Death
+The Miser
+The Piazza Tales
+
+
+Remaining Stories:
+20,000 Leagues Under the Sea
+A Connecticut Yankee in King Arthur's Court
+A Doll's House
+A Little Princess
+A Modest Proposal
+A Portrait of the Artist as a Young Man
+A Room with a View
+A Tale of Two Cities
+A Vindication of the Rights of Woman
+Adam Bede
+Adventures of Huckleberry Finn
+Agamemnon
+Alice's Adventures in Wonderland and Through the Looking-Glass
+All's Well That Ends Well
+An Enemy of the People
+An Ideal Husband
+An Occurrence at Owl Creek Bridge
+Anna Karenina
+Anne of Green Gables
+Anthem
+Antigone
+Around the World in Eighty Days
+As You Like It
+Babbitt
+Black Beauty
+Bleak House
+Candide
+Common Sense
+Confessions
+Coriolanus
+Crime and Punishment
+Cyrano de Bergerac
+Daisy Miller
+Daniel Deronda
+David Copperfield
+Decameron
+Don Quixote
+Dracula
+Dubliners
+Electra
+Emma
+Far From the Madding Crowd
+Fathers and Sons
+Frankenstein
+From the Earth to the Moon
+Ghosts
+Great Expectations
+Gulliver's Travels
+Hamlet
+Hard Times
+Heart of Darkness
+Hedda Gabler
+Henry IV Part 1
+Henry IV Part 2
+Henry V
+Henry VI Part 1
+Henry VI Part 2
+Henry VI Part 3
+Henry VIII
+Howards End
+Idylls of the King
+Incidents in the Life of a Slave Girl
+Inferno
+Ivanhoe
+Jane Eyre
+Joseph Andrews
+Julius Caesar
+Kew Gardens
+Kidnapped
+Kim
+King John
+King Lear
+Last of the Mohicans
+Le Morte D'Arthur
+Libation Bearers
+Ligeia
+Little Brother
+Little Dorrit
+Little Women
+Lord Jim
+Love's Labour's Lost
+Macbeth
+Madame Bovary
+Main Street
+Major Barbara
+Mansfield Park
+Measure for Measure
+Meditations
+Middlemarch
+Moby-Dick
+Much Ado About Nothing
+My ntonia
+Narrative of the Life of Frederick Douglass
+North and South
+Northanger Abbey
+Nostromo
+Notes from the Underground
+O Pioneers!
+Oedipus at Colonus
+Oedipus the King
+Oliver Twist
+Othello
+Our Mutual Friend
+Paradise Lost
+Paradiso
+Pericles
+Persuasion
+Prometheus Bound
+Pudd'nhead Wilson
+Purgatorio
+Pygmalion
+Richard II
+Robinson Crusoe
+Romeo and Juliet
+Sense and Sensibility
+Silas Marner
+Song of Roland
+Sons and Lovers
+Strange Case of Dr. Jekyll and Mr. Hyde
+Tess of the D'Urbervilles
+The Adventures of Sherlock Holmes
+The Adventures of Tom Sawyer
+The Aeneid
+The Age of Innocence
+The Ambassadors
+The American
+The Awakening
+The Bet
+The Black Cat
+The Call of the Wild
+The Canterbury Tales: The Clerk's Tale
+The Cask of Amontillado
+The Cherry Orchard
+The Comedy of Errors
+The Communist Manifesto
+The Count of Monte Cristo
+The Duchess of Malfi
+The Fall of the House of Usher
+The Gift of the Magi
+The Hound of the Baskervilles
+The House of Mirth
+The House of the Seven Gables
+The Hunchback of Notre-Dame
+The Idiot
+The Iliad
+The Importance of Being Earnest
+The Invisible Man
+The Island of Dr. Moreau
+The Jungle
+The Jungle Book
+The Lady with the Dog
+The Legend of Sleepy Hollow
+The Life and Opinions of Tristram Shandy, Gentleman
+The Life of Timon of Athens
+The Man in the Iron Mask
+The Mayor of Casterbridge
+The Merchant of Venice
+The Merry Wives of Windsor
+The Metamorphoses
+The Metamorphosis
+The Mill on the Floss
+The Monkey's Paw
+The Moonstone
+The Mysteries of Udolpho
+The Necklace
+The Odyssey
+The Open Boat
+The Picture of Dorian Gray
+The Portrait of a Lady
+The Prince
+The Prince and the Pauper
+The Red Badge of Courage
+The Red Room
+The Red and the Black
+The Republic
+The Return of Sherlock Holmes
+The Return of the Native
+The Scarlet Letter
+The Seagull
+The Secret Agent
+The Secret Garden
+The Secret Sharer
+The Spanish Tragedy
+The Taming of the Shrew
+The Tempest
+The Three Musketeers
+The Three Sisters
+The Time Machine
+The Tragedy of Antony and Cleopatra
+The Trial
+The Turn of the Screw
+The Two Gentlemen of Verona
+The War of the Worlds
+The White Devil
+The Wings of the Dove
+The Winters Tale
+The Woman in White
+The Wonderful Wizard of Oz
+This Side of Paradise
+Thrse Raquin
+Titus Andronicus
+Tom Jones
+Treasure Island
+Troilus and Cressida
+Twelfth Night, or What You Will
+Typee
+Ulysses
+Uncle Tom's Cabin
+Uncle Vanya
+Vanity Fair
+Walden
+War and Peace
+What Maisie Knew
+Where Angels Fear to Tread
+White Fang
+Wuthering Heights
