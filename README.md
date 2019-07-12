@@ -7,7 +7,7 @@ This repository contains instructions for obtaining the Shmoop corpus as outline
 ## Download Instructions
 
 1. Download this repository.
-2. Download and extract the contents of stories.zip and manual_alignments.zip.
+2. Download and extract the contents of [stories.zip](http://www.cs.toronto.edu/~atef/stories.zip) and [manual_alignments.zip](http://www.cs.toronto.edu/~atef/manual_alignments.zip).
 3. Contact support@shmoop.com to request permission to use Shmoop summaries for research purposes.
 4. Run get_summaries.py to download the summaries from Shmoop.
 
