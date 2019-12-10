@@ -2,23 +2,31 @@
 
 ## Overview
 
-This repository contains instructions for obtaining the Shmoop corpus as outlined here.
+This repository contains instructions for obtaining the *Shmoop corpus*.
 
 ## Download Instructions
 
-1. Download this repository.
+1. Clone this repository.
 2. Download and extract the contents of [stories.zip](http://www.cs.toronto.edu/~atef/stories.zip) and [manual_alignments.zip](http://www.cs.toronto.edu/~atef/manual_alignments.zip).
 3. Contact support@shmoop.com to request permission to use Shmoop summaries for research purposes.
 4. Run get_summaries.py to download the summaries from Shmoop.
 
 ## Contents
 
-The two directories "summaries" and "stories" contain the summaries and stories respectively split by paragraph.
+The two directories `summaries` and `stories` contain the summaries and stories respectively split by paragraph.
 
-The "manual_alignments" directory contains the alignment information between summary and story paragraphs for the validation set.
-Each row in the alignment files indicates which paragraphs the given summary paragraph is aligned to (i.e. S2: 3, 6, 7) indicates an alignment between summary paragraph 2 and story paragraphs 3, 6, 7 (paragraphs are 0-indexed).
+The `manual_alignments` directory contains the alignment information between summary and story paragraphs for the validation set.
+Each row in the alignment files indicates to which paragraphs the given summary paragraph is aligned.
+For example, `S2: 3, 6, 7` means an alignment between summary paragraph 2 and story paragraphs 3, 6, 7 (paragraphs are 0-indexed).
 
-Other files include get_summaries.py which provides a simple script to download the summaries from Shmoop, list_of_works.txt which indicates the works which are included as well as those with manual annotations, and sectioned_works.csv which contains urls used for download.
+Other files include `get_summaries.py` which provides a simple script to download the summaries from Shmoop, `list_of_works.txt` which indicates the works which are included as well as those with manual annotations, and `sectioned_works.csv` which contains URLs used for download.
+
+## Dependencies
+
+- python3.x
+- bs4 (for parsing HTML pages)
+- nltk (for tokenization)
+
 
 ## Example
 
