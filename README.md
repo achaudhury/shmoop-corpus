@@ -26,11 +26,12 @@ Other files include `get_summaries.py` which provides a simple script to downloa
 - python3.x
 - bs4 (for parsing HTML pages)
 - nltk (for tokenization)
+- tqdm (for download status)
 
 
 ## Example
 
-An excerpt from Shakespeare's _A Midsummer Night's Dream_: 
+An excerpt from Shakespeare's _A Midsummer Night's Dream_:
 
 **Summary**
 
@@ -44,11 +45,11 @@ An excerpt from Shakespeare's _A Midsummer Night's Dream_:
 
 **Summary**
 
-**S4:** Snug enters the house, announcing that the Duke is coming from the temple with two or three more couples who were just married.  Flute laments that, had they been able to perform, they'd no doubt be rich men, earning them at least sixpence a day (a royal pension). 
+**S4:** Snug enters the house, announcing that the Duke is coming from the temple with two or three more couples who were just married.  Flute laments that, had they been able to perform, they'd no doubt be rich men, earning them at least sixpence a day (a royal pension).
 
 **Original Text**
 
-**D9:** _Enter Snug the joiner._ 
+**D9:** _Enter Snug the joiner._
 
 **D10:** SNUG Masters, the Duke is coming from the temple,	 and there is two or three lords and ladies more married. If our sport had gone forward, we had all been made men.
 
