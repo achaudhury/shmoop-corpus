@@ -3,7 +3,6 @@ import pdb, os, csv, re, io
 import urllib.request, urllib.error, urllib.parse
 from bs4 import BeautifulSoup
 from tqdm import tqdm
-import common.util as util
 from shutil import rmtree
 from nltk.tokenize import word_tokenize, sent_tokenize
 
@@ -15,11 +14,15 @@ MAIN_SITE = 'https://www.shmoop.com'
 summary_list_file = "data/metadata/sectioned_works.csv"
 
 # Get contents of the summary file
-summary_infos = util.get_csv_contents(summary_list_file)
+with open(summary_list_file, 'r') as csvfile:
+    reader = csv.reader(csvfile, delimiter=',', quotechar='"')
+    summary_infos = list(reader)
 
 # Omit these works as they need to be done manually
 omitted_works = set(["Don Quixote", "Grimms' Fairy Tails", "Ulysses", "The Communist Manifesto", "The Hunchback of Notre-Dame", "Robinson Crusoe"])
 summary_infos = [x for x in summary_infos if x[1] not in omitted_works]
+print("Note the following works while used in the analysis, require additional manual parsing and are not included in the dataset:")
+print(omitted_works)
 
 ## Function to limit summary bullets to 250 tokens, splitting by end of sentence otherwise
 LIMIT = 250
