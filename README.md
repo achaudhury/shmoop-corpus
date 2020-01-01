@@ -2,7 +2,15 @@
 
 ## Overview
 
-This repository contains instructions for obtaining the *Shmoop corpus*.
+This repository contains instructions for obtaining the *Shmoop corpus*. [Here](http://www.cs.toronto.edu/~makarand/shmoop/) is some more information about our project.
+
+## Citation
+<strong>The Shmoop Corpus: A Dataset of Stories with Loosely Aligned Summaries</strong>  
+A. Chaudhury, M. Tapaswi, S. W. Kim, and S. Fidler  
+arXiv: 1912.13082  
+[Project page](http://www.cs.toronto.edu/~makarand/shmoop/) |
+[arXiv](https://arxiv.org/abs/1912.13082)
+
 
 ## Download Instructions
 
