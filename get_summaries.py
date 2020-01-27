@@ -11,7 +11,7 @@ SUMMARY_DIR = 'summaries'
 MAIN_SITE = 'https://www.shmoop.com'
 
 # Summary list info
-summary_list_file = "data/metadata/sectioned_works.csv"
+summary_list_file = "sectioned_works.csv"
 
 # Get contents of the summary file
 with open(summary_list_file, 'r') as csvfile:
@@ -54,39 +54,56 @@ def apply_para_size_limit(split, limit):
     return result
 
 
-
 # For each summary info
-for _, title, url, _, _  in tqdm(summary_infos):
+error_files, error_titles = [], []
+for k, (_, title, url, _, _) in enumerate(summary_infos):
+    print('\n>>> {}. {} <<<'.format(k, title))
 
     # Create a directory for the work if needed
     specific_summary_dir = os.path.join(SUMMARY_DIR, title)
     if not os.path.exists(specific_summary_dir):
         os.makedirs(specific_summary_dir)
 
-    # Parse work page
-    soup = BeautifulSoup(urllib.request.urlopen(MAIN_SITE + str(url) + '/summary.html'), "html.parser")
-    sections = soup.findAll("li", {"class" : "inner-list"})
-    section_titles = [x.text for x in sections]
-    section_urls = [x.a['href'] for x in sections]
-    pdb.set_trace()
+    # If complete, ignore and be done
+    num_atefs_files = len(os.listdir(os.path.join('submission', specific_summary_dir)))
+    num_new_files = len(os.listdir(specific_summary_dir))
+    if num_atefs_files == num_new_files:
+        print('Completed.')
+        continue
 
-    # For each section
-    for index, section_title, section_url in zip(list(range(len(section_titles))), section_titles, section_urls):
+    # Parse page
+    html_address = MAIN_SITE + str(url) + '/summary.html'
+    soup = BeautifulSoup(urllib.request.urlopen(html_address), "html.parser")
+    sections = soup.findAll("li", {"data-class" : "SHEvent"})
 
-        # Get summary content
-        soup = BeautifulSoup(urllib.request.urlopen(MAIN_SITE + url + '/' + section_url), "html.parser")
-        lines = [l.text for l in soup.find_all("div", {"id": "div_PrimaryContent"})[0].findChildren("li")]
+    # Go over each section
+    for index, section in enumerate(sections):
+        output_fname = os.path.join(specific_summary_dir, str(index) + '.txt.utf8')
+        if os.path.exists(output_fname):
+            print('Found section: {}'.format(index))
+            continue
 
+        # Parse section to get bullet point text
+        print('Parsing section: {}'.format(index))
+        section_points = section.findAll("ul", {"id": ""})
+        summary_bullets = []
+        for group_points in section_points:
+            summary_bullets += group_points.findAll("li")
+        lines = [bullet.text for bullet in summary_bullets]
+
+        # Fix weird newline issue
+        for k in range(len(lines)):
+            lines[k] = lines[k].replace('\n', '\n\n')
+
+        # Split
         sized_splits = []
         for l in lines:
             sized_splits.extend(apply_para_size_limit(l, LIMIT))
 
         # Save in a file
-        with io.open(os.path.join(specific_summary_dir, str(index) + '.txt.utf8'), 'w', encoding="utf-8") as f:
+        with io.open(output_fname, 'w', encoding="utf-8") as f:
             for split in sized_splits:
                 if len(split) == 0 or split[-1] != "\n":
                     split = split + str("\n")
                 f.write(split)
                 f.write(str("\n"))
-
-
