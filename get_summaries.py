@@ -64,13 +64,6 @@ for k, (_, title, url, _, _) in enumerate(summary_infos):
     if not os.path.exists(specific_summary_dir):
         os.makedirs(specific_summary_dir)
 
-    # If complete, ignore and be done
-    num_atefs_files = len(os.listdir(os.path.join('submission', specific_summary_dir)))
-    num_new_files = len(os.listdir(specific_summary_dir))
-    if num_atefs_files == num_new_files:
-        print('Completed.')
-        continue
-
     # Parse page
     html_address = MAIN_SITE + str(url) + '/summary.html'
     soup = BeautifulSoup(urllib.request.urlopen(html_address), "html.parser")
