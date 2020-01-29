@@ -17,7 +17,7 @@ arXiv: 1912.13082
 1. Clone this repository.
 2. Download and extract the contents of [stories.zip](http://www.cs.toronto.edu/~atef/stories.zip) and [manual_alignments.zip](http://www.cs.toronto.edu/~atef/manual_alignments.zip).
 3. Contact support@shmoop.com to request permission to use Shmoop summaries for research purposes.
-4. Run get_summaries.py to download the summaries from Shmoop.
+4. Run get_summaries.py to download the summaries from Shmoop. Some of the content in the summaries has changed since our original download, but that does not currently affect the stories with manual alignment.
 
 ## Contents
 
