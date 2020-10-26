@@ -67,21 +67,44 @@ for k, (_, title, url, _, _) in enumerate(summary_infos):
     # Parse page
     html_address = MAIN_SITE + str(url) + '/summary.html'
     soup = BeautifulSoup(urllib.request.urlopen(html_address), "html.parser")
-    sections = soup.findAll("li", {"data-class" : "SHEvent"})
+
+    # Extract urls for sections
+    section_urls = []
+    for link in soup.findAll('a', href=True):
+        section_url = urllib.parse.urljoin(MAIN_SITE, link['href'])
+        if url in section_url and 'summary' in section_url and section_url not in section_urls:
+            section_urls.append(section_url)
+
+    if len(section_urls) == 0:
+        raise Exception("Found no sections for %s" % title)
+    else:
+        print('Found %s sections for %s.' % (len(section_urls), title))
 
     # Go over each section
-    for index, section in enumerate(sections):
+    for index, section_url in enumerate(section_urls):
         output_fname = os.path.join(specific_summary_dir, str(index) + '.txt.utf8')
         if os.path.exists(output_fname):
             print('Found section: {}'.format(index))
             continue
 
         # Parse section to get bullet point text
-        print('Parsing section: {}'.format(index))
-        section_points = section.findAll("ul", {"id": ""})
-        summary_bullets = []
-        for group_points in section_points:
-            summary_bullets += group_points.findAll("li")
+        print('Parsing section: {} {}'.format(index, section_url))
+        
+        section = BeautifulSoup(urllib.request.urlopen(section_url), "html.parser")
+
+        # This is hacky but the updated shmoop website doesn't provide a way
+        # to uniquely identify the div or ul containing the actual summaries.
+        # Instead, we infer the containing list from its relative position (after ul.items)
+
+        list_id = None
+        candidate_lists = list(section.findAll("ul"))
+        for candidate_id, candidate in enumerate(candidate_lists):
+            if 'class' in candidate.attrs and 'items' in candidate['class']:
+                list_id = candidate_id + 1
+                break
+
+        summary_bullets = candidate_lists[list_id].findAll("li")
+
         lines = [bullet.text for bullet in summary_bullets]
 
         # Fix weird newline issue
