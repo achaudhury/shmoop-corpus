@@ -103,7 +103,7 @@ for k, (_, title, url, _, _) in enumerate(summary_infos):
                 list_id = candidate_id + 1
                 break
 
-        if list_id = None:
+        if list_id is None:
             print("Couldn't find containing list for {} {}!  Skipping...".format(index, section_url))
             continue
 
